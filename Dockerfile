@@ -79,6 +79,9 @@ COPY src/core ${AIRFLOW_HOME}/core
 RUN chown -R airflow: ${AIRFLOW_HOME}
 RUN chmod +x entrypoint.sh
 
+RUN ["apt-get","update"]
+RUN ["apt-get","install","-y","vim"]
+
 EXPOSE 8080 5555 8793
 
 USER airflow

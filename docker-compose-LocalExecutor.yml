@@ -16,9 +16,9 @@ services:
             - LOAD_EX=n
             - EXECUTOR=Local
         volumes:
-            - ./apache-airflow/src/dags:/usr/local/airflow/dags
-            - ./apache-airflow/Movie:/usr/local/airflow/Movie
-            - ./apache-airflow/src/utils:/usr/local/airflow/utils
+            - ../apache-airflow/src/dags:/usr/local/airflow/dags
+            - ../apache-airflow/Movie:/usr/local/airflow/Movie
+            - ../apache-airflow/src/utils:/usr/local/airflow/utils
             # Uncomment to include custom plugins
 #            - ./plugins:/usr/local/airflow/plugins
         ports:
